@@ -1,7 +1,7 @@
 Yii 2 Advanced Project Template
 ===============================
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
+Yii 2 Advanced Gulp Sass Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application for
 developing complex Web applications with multiple tiers.
 
 The template includes three tiers: front end, back end, and console, each of which
@@ -12,9 +12,8 @@ deploying the application in different environments.
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+[![Latest Stable Version](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/v/stable.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
+[![Total Downloads](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/downloads.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
 
 DIRECTORY STRUCTURE
 -------------------
