@@ -1,0 +1,32 @@
+// This is the master include file
+//
+// Inspired by Sass Guidelines: http://sass-guidelin.es/
+// and using a variant of the 7-1 pattern for organizing
+// sass partials ( http://sass-guidelin.es/#the-7-1-pattern )
+
+
+// Common style and global variables/mixins
+// that does not depend on vendors
+@import "1-common/colors";
+@import "1-common/bootstrap-variables";
+@import "1-common/fixes";
+
+// Vendors
+@import "2-vendors/bootstrap";
+
+// Global styling that makes use of vendors
+@import "3-global/site";
+@import "3-global/typography";
+
+// Components that could be used in multiple pages
+//@import "4-components/all";
+
+// Page specific style
+//@import "5-pages/all";
+
+// Elements
+// When a style file becomes too big
+// it can be split up.
+// Indivual elements gets placed here
+// in subdirectories named after the page/name
+//@import "6-elements/all";
