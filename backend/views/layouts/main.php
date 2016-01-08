@@ -71,6 +71,7 @@ use common\widgets\Alert;
     </div>
 </footer>
 
+<?= Html::jsFile(YII_DEBUG ? '@web/js/all.js' : '@web/js/all.min.js?v=' . filemtime(Yii::getAlias('@backend/web/js/all.min.js'))) ?>
 <?php $this->endBody() ?>
 </body>
 </html>
