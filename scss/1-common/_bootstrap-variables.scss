@@ -36,7 +36,7 @@ $link-hover-color:      darken($link-color, 15%);
 
 
 $navbar-height: 80px;
-$navbar-inverse-link-active-bg:             transparent;
+$navbar-inverse-link-active-bg:             darken($yii-blue, 2%);
 $navbar-inverse-border:                     transparent;
 $navbar-border-radius: 0;
 $navbar-margin-bottom: 0;
