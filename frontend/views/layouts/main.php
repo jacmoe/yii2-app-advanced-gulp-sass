@@ -16,7 +16,7 @@ use common\widgets\Alert;
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <?= Html::cssFile(YII_DEBUG ? '@frontend/web/css/all.css' : '@frontend/web/css/all.min.css?v=' . filemtime(Yii::getAlias('@frontend/web/css/all.min.css'))) ?>
+    <?= Html::cssFile(YII_DEBUG ? '@web/css/all.css' : '@web/css/all.min.css?v=' . filemtime(Yii::getAlias('@frontend/web/css/all.min.css'))) ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
