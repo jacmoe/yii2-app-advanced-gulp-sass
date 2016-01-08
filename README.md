@@ -15,6 +15,36 @@ Documentation is at [docs/guide/README.md](docs/guide/README.md).
 [![Latest Stable Version](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/v/stable.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
 [![Total Downloads](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/downloads.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
 
+# Installation
+## Prerequisites
+Before you start, make sure you have installed [composer](https://getcomposer.org/) and [Node.js](http://nodejs.org/).
+If you are on Debian or Ubuntu you might also want to install the [libnotify-bin](https://packages.debian.org/jessie/libnotify-bin) package, which is used by Gulp to inform you about its status.
+
+### Gulp
+install gulp globally if you haven't done so before
+
+```
+npm install -g gulp
+```
+### Browsersync
+install browsersync globally if you haven't done so before
+
+```
+npm install -g browser-sync
+```
+## Composer
+```
+php composer.phar global require "fxp/composer-asset-plugin:~1.1.1"
+php composer.phar create-project --prefer-dist --stability=dev jacmoe/yii2-app-advanced-gulp-sass advanced
+```
+
+## Post-installation
+
+initialize the application, choose "development"
+```
+./init
+```
+
 DIRECTORY STRUCTURE
 -------------------
 
