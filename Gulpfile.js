@@ -37,10 +37,12 @@ gulp.task('styles', function() {
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('.', { sourceRoot: '../../scss/' }))
-    .pipe(gulp.dest('web/css'))
+    .pipe(gulp.dest('frontend/web/css'))
+    .pipe(gulp.dest('backend/web/css'))
     .pipe(gulpif('*.css', rename({ suffix: '.min' })))
     .pipe(gulpif('*.css', cssnano()))
-    .pipe(gulpif('*.css', gulp.dest('web/css')))
+    .pipe(gulpif('*.css', gulp.dest('frontend/web/css')))
+    .pipe(gulpif('*.css', gulp.dest('backend/web/css')))
     .pipe(gulpif('*.css', notify({ message: 'Styles task complete' })));
 });
 
@@ -52,10 +54,12 @@ gulp.task('scripts', function() {
     .pipe(sourcemaps.init())
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.', { sourceRoot: '../../js/' }))
-    .pipe(gulp.dest('web/js'))
+    .pipe(gulp.dest('frontend/web/js'))
+    .pipe(gulp.dest('backend/web/js'))
     .pipe(gulpif('*.js', rename({ suffix: '.min' })))
     .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.js', gulp.dest('web/js')))
+    .pipe(gulpif('*.js', gulp.dest('frontend/web/js')))
+    .pipe(gulpif('*.js', gulp.dest('backend/web/js')))
     .pipe(gulpif('*.js', notify({ message: 'Scripts task complete' })));
 });
 
@@ -63,7 +67,8 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
   return gulp.src('img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('web/img'))
+    .pipe(gulp.dest('frontend/web/img'))
+    .pipe(gulp.dest('backend/web/img'))
     .pipe(notify({ message: 'Images task complete' }));
 });
 
@@ -73,12 +78,14 @@ gulp.task('fonts', function() {
     [   'vendor/bower/bootstrap-sass/assets/fonts/bootstrap/*',
         'vendor/bower/font-awesome/fonts/*'
     ])
-    .pipe(gulp.dest('./web/fonts'));
+    .pipe(gulp.dest('./frontend/web/fonts'))
+    .pipe(gulp.dest('./backend/web/fonts'));
 });
 
 // Clean
 gulp.task('clean', function() {
-  return del(['web/css/*', 'web/js/*', 'web/fonts/*']);
+  return del(['frontend/web/css/*', 'frontend/web/js/*', 'frontend/web/fonts/*',
+              'backend/web/css/*', 'backend/web/js/*', 'backend/web/fonts/*']);
 });
 
 // Build the "web" folder by running all of the above tasks
@@ -104,11 +111,15 @@ gulp.task('watch', function() {
   //gulp.watch('img/**/*', ['images']);
 
   // Watch any view files in 'views', reload on change
-  gulp.watch(['views/**/*.php']).on('change', browsersync.reload);
+  gulp.watch(['common/views/**/*.php']).on('change', browsersync.reload);
+  gulp.watch(['frontend/views/**/*.php']).on('change', browsersync.reload);
+  gulp.watch(['backend/views/**/*.php']).on('change', browsersync.reload);
 
   // Watch any files in 'web', reload on change
-  gulp.watch(['web/js/*']).on('change', browsersync.reload);
-  gulp.watch(['web/css/*']).on('change', browsersync.reload);
+  gulp.watch(['frontend/web/js/*']).on('change', browsersync.reload);
+  gulp.watch(['backend/web/css/*']).on('change', browsersync.reload);
+  gulp.watch(['frontend/web/js/*']).on('change', browsersync.reload);
+  gulp.watch(['backend/web/css/*']).on('change', browsersync.reload);
 });
 
 gulp.task('default', ['build', 'watch'], function() {});
