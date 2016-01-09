@@ -10,6 +10,7 @@
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
+        "bower-asset/font-awesome": "^4.5",
         "bower-asset/bootstrap-sass": "3.3.6"
     },
     "require-dev": {
