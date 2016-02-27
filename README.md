@@ -12,8 +12,10 @@ deploying the application in different environments.
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
-[![Latest Stable Version](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/v/stable.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
-[![Total Downloads](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/downloads.png)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
+[![Latest Stable Version](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/v/stable)](https://packagist.org/packages/jacmoe/yii2-app-basic-gulp-sass)
+[![Total Downloads](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/downloads)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
+[![Latest Unstable Version](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/v/unstable)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
+[![License](https://poser.pugx.org/jacmoe/yii2-app-advanced-gulp-sass/license)](https://packagist.org/packages/jacmoe/yii2-app-advanced-gulp-sass)
 
 # Installation
 ## Prerequisites
