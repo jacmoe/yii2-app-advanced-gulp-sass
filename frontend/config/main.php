@@ -17,7 +17,18 @@ return [
             'enableAutoLogin' => true,
         ],
         'assetManager' => [
-            'bundles' => false,
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => false,
+                'yii\validators\ValidationAsset' => false,
+                'yii\web\YiiAsset' => false,
+                'yii\widgets\ActiveFormAsset' => false,
+                'yii\bootstrap\BootstrapPluginAsset' => false,
+                'yii\web\JqueryAsset' => false,
+                //'yii\authclient\widgets\AuthChoiceAsset' => false, //authchoice.js
+                //'yii\authclient\widgets\AuthChoiceStyleAsset' => false, //authchoice.css
+            ],
+            'linkAssets' => true,
+            'appendTimestamp' => true,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
